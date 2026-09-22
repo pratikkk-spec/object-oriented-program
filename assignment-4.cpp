@@ -29,7 +29,7 @@ public:
 
 int main() {
     Book book1;
-    Book book2("C++ ", "Samarth", 500);
+    Book book2("C++ ", "pratik", 500);
 
     book1.display();
 
