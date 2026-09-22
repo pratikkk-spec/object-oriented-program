@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Library
+{
+private:
+    int bookID;
+    string bookName;
+
+    // Static data member
+    static int totalBooks;
+
+public:
+    Library(int id, string name)
+    {
+        bookID = id;
+        bookName = name;
+        totalBooks++;
+    }
+
+    void display()
+    {
+        cout << "Book ID: " << bookID << endl;
+        cout << "Book Name: " << bookName << endl;
+    }
+
+    // Static member function
+    static void displayTotalBooks()
+    {
+        cout << "Total Books: " << totalBooks << endl;
+    }
+};
+
+// Definition of static data member
+int Library::totalBooks = 0;
+
+int main()
+{
+    Library b1(101, "object oriented programming");
+    Library b2(102, "Data Structures");
+    Library b3(103, "discrete mathematics");
+
+    b1.display();
+    cout << endl;
+
+    b2.display();
+    cout << endl;
+
+    b3.display();
+    cout << endl;
+
+    // Calling static member function
+    Library::displayTotalBooks();
+
+    return 0;
+}
