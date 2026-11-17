@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+template <class t>
+t greaternumber( t a, t b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+int main ()
+{
+    cout<< "greater student marks:"<< larger(85,90)<<endl;
+    cout<< "greater product price:"<< larger(250,350)<<endl;
+    cout<< "greater sensor reading:"<< larger(25.5f,30.8f)<<endl;
+    return 0;
+}
