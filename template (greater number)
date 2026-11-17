@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+template <class t>
+t greaternumber( t a, t b)
+{
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+int main ()
+{
+    int x=10, y=20;
+    cout<<"greater integers:"<<greaternumber(x,y)<<endl;
+    float p=12.5,q=15.7;
+    cout<<"greater decimal:"<<greaternumber(p,q)<<endl;
+    return 0;
+}
